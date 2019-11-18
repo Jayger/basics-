@@ -84,7 +84,7 @@ console.log(typeof x);
 
 /********************
  * Operator precendence 
- */
+
 
  var now = 2019;
  var yearJohn = 1990;
@@ -114,4 +114,68 @@ console.log(typeof x);
  console.log(x);
  x--;
  console.log(x);
+ */
+
+ /********************
+  * Code Challenge
+  
+
+ var heightMark, heightJohn, massMark, massJohn, bmiMark, bmiJohn, comparison;
  
+ heightMark = 1.69; // meters
+ massMark = 78; // kg
+
+ heightJohn = 1.72; // meters
+ massJohn = 75; // kg
+
+ bmiMark = massMark / (heightMark * heightMark);
+ bmiJohn = massJohn / (heightJohn * heightJohn);
+ console.log(bmiJohn, bmiMark);
+
+ comparison = bmiMark >= bmiJohn;
+
+ console.log("Is Mark's BMI higher than John's?" + ' ' + comparison);
+*/
+
+
+/**********************
+ * If / else Statements
+ */
+
+ var firstName = 'John';
+ var civilStatus = 'single';
+ 
+ if(civilStatus === 'married') {
+   console.log(firstName + ' is Married!');
+ } else {
+   console.log(firstName + ' is Single!');
+ }
+
+ var isMarried = true;
+ if(isMarried) {
+  console.log(firstName + ' is Married!');
+} else {
+  console.log(firstName + ' is Single!');
+}
+
+var heightMark, heightJohn, massMark, massJohn, bmiMark, bmiJohn, higherBmi;
+ 
+ heightMark = 1.69; // meters
+ massMark = 78; // kg
+
+ heightJohn = 1.72; // meters
+ massJohn = 75; // kg
+
+ bmiMark = massMark / (heightMark * heightMark);
+ bmiJohn = massJohn / (heightJohn * heightJohn);
+ console.log(bmiJohn, bmiMark);
+
+ if(bmiMark > bmiJohn) {
+   console.log("Mark's BMI higher than John's");
+ } else {
+   console.log("John's BMI higher than Mark's");
+ }
+
+//  higherBmi = bmiMark >= bmiJohn;
+
+//  console.log("Is Mark's BMI higher than John's?" + ' ' + higherBmi);
