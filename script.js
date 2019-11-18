@@ -202,7 +202,7 @@ var heightMark, heightJohn, massMark, massJohn, bmiMark, bmiJohn, higherBmi;
 
  /**********************
   * The Ternary Operator and Switch Statement
-  */
+  
 
   var firstName = 'John';
   var age = 17;
@@ -250,6 +250,63 @@ var heightMark, heightJohn, massMark, massJohn, bmiMark, bmiJohn, higherBmi;
         break;
     default:
         console.log(firstName + ' is a man.')
-
-
   }
+*/
+
+/****************************
+ * Truthy and Falsy and equality operators
+
+ // falsy values: undefined, null, 0, '', NaN
+ // truthy values: NOT falsy values
+
+ var height;
+
+ height = 23;
+
+ if(height || height === 0) {
+   console.log('Variable is defined');
+ } else {
+   console.log('Variable has NOT been defined');
+ }
+
+ // Equality operators
+
+ if (height == '23') {
+   console.log('The == operator does type coercion!');
+ }
+
+ */
+
+ /***************************
+  * Code Challenge 2
+
+  var teamMikeAvg, teamJohnAvg; 
+
+  teamMikeAvg = (89 + 120 + 103) / 3;
+  teamJohnAvg = (116 + 94 + 123) / 3;
+  teamMaryAvg = (97 + 134 + 105) / 3;
+  console.log(teamJohnAvg, teamMikeAvg, teamMaryAvg);
+
+  if(teamJohnAvg > teamMikeAvg && teamJohnAvg > teamMaryAvg) {
+    console.log('John\'s team wins with ' + teamJohnAvg + ' points')
+  } else if (teamMikeAvg > teamJohnAvg && teamMikeAvg > teamMaryAvg) {
+    console.log('Mike\'s team wins with ' + teamMikeAvg + ' points')
+  } else if ( teamMaryAvg > teamMikeAvg && teamMaryAvg > teamJohnAvg) {
+    console.log('Mary\'s team wins with ' + teamMaryAvg + ' points')
+  } else {
+    console.log('There is a draw!')
+  }
+
+
+
+
+
+
+  // if(teamMikeAvg > teamJohnAvg) {
+  //   console.log('Mike\'s team is the winner with an average score of ' + teamMikeAvg)
+  // } else if (teamMikeAvg < teamJohnAvg) {
+  //   console.log('John\'s team is the winner with an average score of ' + teamJohnAvg)
+  // } else {
+  //   console.log('Both John and Mike\'s team average score is a draw!')
+  // }
+*/
