@@ -341,7 +341,7 @@ var heightMark, heightJohn, massMark, massJohn, bmiMark, bmiJohn, higherBmi;
 
  /*********************************
   * Function Statements and Expressions
-  */
+
 
   // Function declaration
   // function whatDoYouDo(job, firstName){}
@@ -364,3 +364,70 @@ var heightMark, heightJohn, massMark, massJohn, bmiMark, bmiJohn, higherBmi;
 console.log(whatDoYouDo('teacher', 'John'));
 console.log(whatDoYouDo('designer', 'Jane'));
 console.log(whatDoYouDo('retired', 'Mark'));
+
+*/
+
+/***********************************
+ * Arrays
+ 
+
+
+ // Initialize new array
+ var names = ['John', 'Mark', 'Jane'];
+ var years = new Array(1990, 1969, 1948);
+
+ console.log(names[2]);
+ console.log(names.length);
+
+ // Mutate array data
+ names[1] = 'Ben';
+ names[names.length] = 'Mary';
+ console.log(names);
+
+ // Different data types
+ var john = ['John', 'Smith', 1990, 'teacher', false];
+
+ john.push('blue');
+ john.unshift('Mr.');
+ console.log(john)
+
+ john.pop();
+ john.pop();
+ john.shift();
+ console.log(john);
+
+ console.log(john.indexOf(1990));
+
+ var isDesigner = john.indexOf('designer') === -1 ? 'John is NOT a designer' : 'John IS a designer';
+console.log(isDesigner);
+*/
+
+/****************************
+ * Code Challenge 3
+ 
+
+ tipArr = [];
+ finalBillArr =[];
+
+ function tipCalc(bill) {
+   var percentage;
+   if(bill < 50) {
+      percentage = .2;
+   } else if (bill >= 50 && bill < 200) {
+      percentage = .15;
+   } else {
+      percentage = .1;
+   }
+   return percentage * bill;
+ }
+
+ var bills = [124, 48, 268];
+ var tips = [tipCalc(bills[0]),
+             tipCalc(bills[1]),
+             tipCalc(bills[2])];
+ var finalValues = [bills[0] + tips[0],
+                    bills[1] + tips[1],
+                    bills[2] + tips[2]]
+console.log(tips, finalValues);
+
+*/
