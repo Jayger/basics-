@@ -464,7 +464,6 @@ console.log(tips, finalValues);
 
 /**************************
  * Objects and methods
- */
 
 
 var john = {
@@ -480,3 +479,56 @@ var john = {
 };
 john.calcAge();
 console.log(john);
+*/
+
+/**************************
+ * Code Challenge #4
+ 
+
+ var mark = {
+   name: 'Mark Lovecraft',
+   mass: 69,
+   height: 1.72,
+   calcBMI: function(){
+     this.bmi = this.mass / (this.height * this.height)
+   }
+ }
+
+ var john = {
+   name: 'John Smith',
+   mass: 73,
+   height: 1.69,
+   calcBMI: function(){
+     this.bmi = this.mass / (this.height * this.height)
+   }
+ }
+
+ if (john.calcBMI() > mark.calcBMI()){
+   console.log(john.name + ' has a higher BMI of ' + john.bmi);
+ } else if (mark.bmi > john.bmi) {
+   console.log(mark.name + ' has a higher BMI of ' + mark.bmi);
+ } else {
+   console.log('They have the same BMI!')
+ }
+
+ */
+
+ /************************
+  * Loops and iteration
+  */
+
+  for(var i = 0; i <= 20; i++) {
+    console.log(i)
+  }
+
+  // i = 0, 0 < 10 true, log i to console, i++
+  // i = 1, 1 < 10 true, log i to console, i++
+  // ...
+  // i = 9, 9 < 10, true log i to console, i++
+  // i = 10, 10 < 10 FALSE, exit the loop!
+
+ var john = ['John', 'Smith', 1990, 'designer', false];
+
+ for(var i = 0; i < john.length; i++) {
+   console.log(john[i]);
+ }
