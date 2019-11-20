@@ -561,3 +561,85 @@ for(var i = john.length - 1 ; i >= 0; i--) {
     console.log(john[i]);
 }
 */
+
+/****************************
+ * Code Challenge #5
+ 
+
+ var markTips = [];
+ var johnTips= [];
+ var johnFinalBills = [];
+ var markFinalBills = [];
+
+ var johnBills = {
+   bills: [124, 48, 268, 180, 42],
+   calcBills: function() {
+     for(var i = 0; i < this.bills.length; i++){
+       var percent;
+       var finalBill;
+       if(this.bills[i] < 50){
+         percent = .2;
+         johnTips.push(percent);
+       } else if (this.bills[i] >= 50 && this.bills[i] < 200){
+         percent = .15
+         johnTips.push(percent);
+       } else {
+         percent = .1;
+         johnTips.push(percent);
+       }
+       finalBill = percent * this.bills[i];
+       johnFinalBills.push(finalBill);
+      }
+   }
+ }
+
+
+
+
+ var markBills = {
+  bills: [77, 375, 110, 45],
+  calcBills: function() {
+    for(var i = 0; i < this.bills.length; i++){
+      var percent;
+      var finalBill;
+      if(this.bills[i] < 100){
+        percent = .2;
+        markTips.push(percent);
+      } else if (this.bills[i] >= 100 && this.bills[i] < 300){
+        percent = .1
+        markTips.push(percent);
+      } else {
+        percent = .25;
+        markTips.push(percent);
+      }
+      finalBill = percent * this.bills[i];
+      markFinalBills.push(finalBill);
+     }
+  }
+}
+
+ johnBills.calcBills();
+ markBills.calcBills();
+ console.log(johnFinalBills, markFinalBills);
+
+function averageTips(tips) {
+  var total = 0;
+  for(var i = 0; i < tips.length; i++) {
+    total = total + tips[i];
+  }
+  return total / tips.length;
+}
+
+var johnAverage = averageTips(johnTips);
+var markAverage = averageTips(markTips)
+
+console.log(johnAverage, markAverage)
+
+if(johnAverage > markAverage) {
+  console.log('John\s family tips were higher!')
+} else if (markAverage > johnAverage) {
+  console.log('Mark\s family tips were higher!')
+} else {
+  console.log('Both family tips were the same.')
+}
+*/
